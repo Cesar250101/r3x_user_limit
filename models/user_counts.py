@@ -14,7 +14,7 @@ class Users(models.Model):
         users = self.search([('active','=',True)] )
         active_users = len(users)  - 1
         if active_users >= int(user_limit):
-            raise UserError(_("Su plan incluye hasta '%s'. Por favor comuniquese con pablo@method.cl!")% (user_limit,))
+            raise UserError(_("Su plan incluye hasta '%s' usuario. Por favor comuniquese con Method ERP al correo pablo@method.cl!")% (user_limit,))
         return super(Users, self).create(vals_list)
 
 
